@@ -98,7 +98,7 @@ class Token_X_pause(Token_X_core):
 
 class Token_X(Token_X_mint_burn, Token_X_administrator, Token_X_pause, Token_X_core):
     def __init__(self, admin):
-        Token_X_core.__init__(self, paused = False, administrator = sp.sender())
+        Token_X_core.__init__(self, paused = False, administrator = admin)
 
 class Viewer(sp.Contract):
     def __init__(self, t):
